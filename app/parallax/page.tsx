@@ -8,14 +8,14 @@ type Props = {}
 function page({}: Props) {
   return (
     <section className="relative   h-[300vh] w-full">
+      <Image
+        fill
+        alt="bg"
+        src={Stadium}
+        className="sticky top-0 -z-[10]  object-cover"
+      />
       <div className="relative ">
         <Parallax />
-        <Image
-          fill
-          alt="bg"
-          src={Stadium}
-          className="sticky top-0 -z-[10]  object-cover"
-        />
       </div>
     </section>
   )
