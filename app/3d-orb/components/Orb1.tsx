@@ -40,7 +40,7 @@ function Orb({
   //   sphereRadius = 5,
   //   backgroundColor = '#ebebeb',
   totalImages = 6,
-  totalItems = 95,
+  totalItems = 80,
   baseWidth = 0.6,
   baseHeight = 0.6,
   sphereRadius = 5,
