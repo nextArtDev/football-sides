@@ -18,9 +18,10 @@ const Parallax = ({ type }: { type?: string }) => {
   // y = yText => if (scrollYProgress === 0 ) return 0% , and if(scrollYProgress ===1) return 500%
   // It means if scrollYProgress===0 than y = 0% , and if scrollYProgress===1 then y = 500% and everything between them divides.
   const yText = useTransform(scrollYProgress, [0, 1], ['0%', '500%'])
-  const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
-  const yMinusBg = useTransform(scrollYProgress, [0, 1], ['0%', '-100%'])
-  const xBg = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
+  const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
+  const yMinusBg = useTransform(scrollYProgress, [0, 1], ['0%', '-60%'])
+  const xBg = useTransform(scrollYProgress, [0, 1], ['0%', '60%'])
+  const xMinusBg = useTransform(scrollYProgress, [0, 1], ['0%', '-20%'])
   const rotateBg = useTransform(scrollYProgress, [0, 1], ['0', '360'])
 
   return (
@@ -50,17 +51,17 @@ const Parallax = ({ type }: { type?: string }) => {
       <motion.div
         className="mountains"
         style={{
-          backgroundImage: 'url("/images/player1.png")',
+          backgroundImage: 'url("/images/goalkeeper.png")',
           backgroundSize: 'contain',
           backgroundPosition: 'bottom',
           backgroundRepeat: 'no-repeat',
           width: '100%',
           height: '100%',
-          scale: 0.5,
+          scale: 0.4,
           position: 'absolute',
           bottom: '-15%',
           left: '-35%',
-          zIndex: '1',
+          zIndex: '4',
           x: xBg,
           y: yMinusBg,
           opacity: '80%',
@@ -70,23 +71,23 @@ const Parallax = ({ type }: { type?: string }) => {
       <motion.div
         className="planets"
         style={{
+          backgroundImage: `url('/images/player3.png')`,
           backgroundSize: 'contain',
           backgroundPosition: 'bottom',
           width: '100%',
           height: '100%',
-          scale: 0.5,
+          scale: 0.8,
           position: 'absolute',
           top: '-10%',
-          left: '-30%',
+          left: '30%',
           backgroundRepeat: 'no-repeat',
           zIndex: '2',
           opacity: '80%',
-          x: xBg,
+          x: xMinusBg,
           y: yBg,
           //   backgroundImage: `url(${
           //     type === 'services' ? '/planets.png' : '/sun.png'
           //   })`,
-          backgroundImage: `url('/images/player2.png')`,
         }}
       ></motion.div>
       <motion.div

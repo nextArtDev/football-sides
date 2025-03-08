@@ -8,7 +8,7 @@ function page() {
   return (
     <section className="hero relative">
       {/* <StarScroll /> */}
-      <StarsCanvas />
+      {/* <StarsCanvas /> */}
       <div
         // style={{
         //   width: '100vw',

@@ -2,6 +2,7 @@
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
 import HorizontalScrollControl from './components/HorizontalScrollControl'
+import Orb from '../3d-orb/components/Orb1'
 
 type Props = {}
 
@@ -14,7 +15,9 @@ function page({}: Props) {
           <HorizontalScrollControl />
         </Canvas>
       </div>
-      <div className="h-screen bg-red-500"></div>
+      <div className="h-screen bg-red-500">
+        <Orb />
+      </div>
     </section>
   )
 }
