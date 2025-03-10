@@ -1,7 +1,9 @@
 import Chooghaa from '@/app/background/components/Chooghaa'
 import React from 'react'
 import RotatingStar from './RotatingStar'
-import DynamicLogo from './DynamicLogo'
+// import DynamicLogo from './DynamicLogo'
+import FallingStars from './falling-stars/FallingStars'
+import DynamicLogo from './FallingLogo'
 
 type Props = {}
 
@@ -11,9 +13,11 @@ function Hero({}: Props) {
       <Chooghaa className="absolute inset-0 -z-10 mix-blend-difference" />
 
       <article className="px-2">
-        <div className="w-fit">
+        <div className="absolute top-4 left-1/2 -translate-x-1/2">
+          {/* <DynamicLogo /> */}
           <DynamicLogo />
         </div>
+        {/* <FallingStars /> */}
         <p>باشگاه و مدرسه فوتبال</p>
         <h1 className="text-3xl text-white  font-bold  mix-blend-difference ">
           باشگاه و مدرسه فوتبال سپاهان مسجدسلیمان
