@@ -10,11 +10,11 @@ function page({}: Props) {
   return (
     <div>
       <Chooghaa />
-      <Choogha />
+      {/* <Choogha />
       <PianoKeys />
       <div className="bg-white">
         <StripePattern />
-      </div>
+      </div> */}
     </div>
   )
 }

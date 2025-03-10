@@ -1,14 +1,23 @@
+'use client'
+import { cn } from '@/lib/utils'
 import React from 'react'
+import { motion } from 'motion/react'
+type Props = {
+  className?: string
+}
 
-type Props = {}
-
-function Chooghaa({}: Props) {
+function Chooghaa({ className }: Props) {
   return (
-    <section className="bg-white flex">
+    <motion.section
+      initial={false}
+      whileInView={{ height: 'auto' }}
+      transition={{ type: 'tween', duration: 1.5, ease: 'circOut' }}
+      className={cn('bg-yellow-400 flex h-0', className)}
+    >
       <div className="grid grid-cols-3 grid-rows-6  h-[700px] w-[3rem]">
-        <div className="col-span-1 row-span-5 bg-white"> </div>
+        <div className="col-span-1 row-span-5 bg-yellow-400"> </div>
         <div className="col-span-1 row-span-5 bg-black"> </div>
-        <div className="col-span-1 row-span-5 bg-white"> </div>
+        <div className="col-span-1 row-span-5 bg-yellow-400"> </div>
       </div>
       <div className="grid grid-cols-3 grid-rows-6 h-[700px] w-[3rem]">
         {/* Div6 */}
@@ -18,7 +27,7 @@ function Chooghaa({}: Props) {
         <div className="row-span-3 col-start-2 row-start-3 bg-black"> </div>
       </div>
       <div className="grid grid-cols-1 grid-rows-6  h-[700px] w-[1rem]">
-        <div className="col-span-1 row-span-5 bg-white"> </div>
+        <div className="col-span-1 row-span-5 bg-yellow-400"> </div>
       </div>
       <div className="grid grid-cols-10 grid-rows-6 h-[700px] w-[12rem]">
         <div className="col-span-9 bg-black  "> </div>
@@ -46,7 +55,7 @@ function Chooghaa({}: Props) {
         <div className="row-span-3 col-start-2 row-start-3 bg-black"> </div>
       </div>
       <div className="grid grid-cols-1 grid-rows-6  h-[700px] w-[1rem]">
-        <div className="col-span-1 row-span-5 bg-white"> </div>
+        <div className="col-span-1 row-span-5 bg-yellow-400"> </div>
       </div>
       <div className="grid grid-cols-10 grid-rows-6 h-[700px] w-[12rem]">
         <div className="col-span-9 bg-black  "> </div>
@@ -110,7 +119,7 @@ function Chooghaa({}: Props) {
         <div className="row-span-3 col-start-2 row-start-3 bg-black"> </div>
       </div>
       <div className="grid grid-cols-1 grid-rows-6  h-[700px] w-[1rem]">
-        <div className="col-span-1 row-span-5 bg-white"> </div>
+        <div className="col-span-1 row-span-5 bg-yellow-400"> </div>
       </div>
       <div className="grid grid-cols-10 grid-rows-6 h-[700px] w-[12rem]">
         <div className="col-span-9 bg-black  "></div>
@@ -138,11 +147,11 @@ function Chooghaa({}: Props) {
         <div className="row-span-3 col-start-2 row-start-3 bg-black"> </div>
       </div>
       <div className="grid grid-cols-3 grid-rows-6  h-[700px] w-[3rem]">
-        <div className="col-span-1 row-span-5 bg-white"> </div>
+        <div className="col-span-1 row-span-5 bg-yellow-400"> </div>
         <div className="col-span-1 row-span-5 bg-black"></div>
-        <div className="col-span-1 row-span-5 bg-white"> </div>
+        <div className="col-span-1 row-span-5 bg-yellow-400"> </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
