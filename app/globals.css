@@ -26,7 +26,7 @@ body {
 }
 
 @theme {
-  --animate-orbit: orbit calc(var(--duration, 2) * 1s) linear infinite;
+  --animate-orbit: orbit calc(var(--duration, 2) * 9s) linear infinite;
 
   @keyframes orbit {
     0% {

@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import RotatingStar from './RotatingStar'
 import Image from 'next/image'
 import ball from '@/public/images/ball.png'
+import cup from '@/public/images/world-cup.png'
 import { motion, useScroll, useSpring, useTransform } from 'motion/react'
 
 type Props = {}
@@ -45,10 +46,11 @@ function DynamicLogo({}: Props) {
     [0, viewportHeight * 0.1, viewportHeight * 0.4]
   )
   const opacity = useTransform(smoothProgress, [0, 0.8, 1], [1, 1, 0])
-  const scale = useTransform(smoothProgress, [0, 0.8, 1], [1, 1.2, 2])
+  const FaidOpacity = useTransform(smoothProgress, [0, 0.8, 1], [0, 0, 1])
+  const scale = useTransform(smoothProgress, [0, 0.8, 1], [1, 0.8, 1.12])
 
   return (
-    <div ref={containerRef} className="relative h-[120vh] w-full  ">
+    <div ref={containerRef} className="relative h-[110vh] w-full  ">
       <motion.div
         style={{
           y: yPosition,
@@ -72,6 +74,21 @@ function DynamicLogo({}: Props) {
             className="scale-50 cursor-not-allowed pointer-events-none"
             //   style={{ transform: 'scale(0.5)' }}
           />
+        </motion.figure>
+        <motion.figure
+          style={{ opacity: FaidOpacity }}
+          className="flex flex-col gap-0.5"
+        >
+          <Image
+            fill
+            alt="world-cup"
+            src={cup}
+            className="scale-50 cursor-not-allowed pointer-events-none"
+            //   style={{ transform: 'scale(0.5)' }}
+          />
+          <p className="text-center absolute w-fit h-fit top-3/4 left-1/2 -translate-x-1/2  inset-0 font-bold text-white">
+            افتخارات
+          </p>
         </motion.figure>
       </motion.div>
     </div>

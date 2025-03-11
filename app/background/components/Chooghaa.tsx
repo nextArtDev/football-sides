@@ -12,6 +12,7 @@ function Chooghaa({ className }: Props) {
       initial={false}
       whileInView={{ height: 'auto' }}
       transition={{ type: 'tween', duration: 1.5, ease: 'circOut' }}
+      viewport={{ once: true }}
       className={cn('bg-yellow-400 flex h-0 max-w-7xl mx-auto', className)}
     >
       <div className="grid grid-cols-3 grid-rows-6  h-[700px] w-[3rem]">
