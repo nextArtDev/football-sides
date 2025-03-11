@@ -47,10 +47,13 @@ function DynamicLogo({}: Props) {
   )
   const opacity = useTransform(smoothProgress, [0, 0.8, 1], [1, 1, 0])
   const FaidOpacity = useTransform(smoothProgress, [0, 0.8, 1], [0, 0, 1])
-  const scale = useTransform(smoothProgress, [0, 0.8, 1], [1, 0.8, 1.12])
+  const scale = useTransform(smoothProgress, [0, 0.8, 1], [1, 0.3, 1.2])
 
   return (
-    <div ref={containerRef} className="relative h-[110vh] w-full  ">
+    <div
+      ref={containerRef}
+      className="relative h-[100vh] md:h-[110vh] w-full  "
+    >
       <motion.div
         style={{
           y: yPosition,

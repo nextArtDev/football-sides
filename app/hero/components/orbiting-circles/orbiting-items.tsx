@@ -15,8 +15,8 @@ function OrbitingItems({}: Props) {
       className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden"
     >
       {/* <Chooghaa className="absolute inset-0 -z-10 mix-blend-difference" /> */}
-      <OrbitingCircles duration={70} iconSize={40} radius={110}>
-        {/* <StarSvg /> */}
+      {/* <OrbitingCircles duration={70} iconSize={40} radius={110}>
+    
         <OrbitingItem>
           <p>افتخارات</p>
         </OrbitingItem>
@@ -29,14 +29,14 @@ function OrbitingItems({}: Props) {
         <OrbitingItem>
           <p>افتخارات</p>
         </OrbitingItem>
-      </OrbitingCircles>
-      <OrbitingCircles
-        duration={70}
-        iconSize={60}
-        radius={170}
-        reverse
-        speed={10}
-      >
+      </OrbitingCircles> */}
+      <OrbitingCircles duration={70} iconSize={60} radius={150} speed={10}>
+        <OrbitingItem>
+          <p>افتخارات</p>
+        </OrbitingItem>
+        <OrbitingItem>
+          <p>افتخارات</p>
+        </OrbitingItem>
         <OrbitingItem>
           <p>افتخارات</p>
         </OrbitingItem>
