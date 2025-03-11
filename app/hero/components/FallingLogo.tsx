@@ -41,10 +41,11 @@ function DynamicLogo({}: Props) {
   // Animation ranges
   const yPosition = useTransform(
     smoothProgress,
-    [0, 1],
-    [0, viewportHeight * 0.4]
+    [0, 0.8, 1],
+    [0, viewportHeight * 0.1, viewportHeight * 0.4]
   )
   const opacity = useTransform(smoothProgress, [0, 0.8, 1], [1, 1, 0])
+  const scale = useTransform(smoothProgress, [0, 0.8, 1], [1, 1.2, 2])
 
   return (
     <div ref={containerRef} className="relative h-[120vh] w-full  ">
@@ -57,7 +58,10 @@ function DynamicLogo({}: Props) {
         }}
         className="relative w-[150px] aspect-square mx-auto flex items-center justify-center"
       >
-        <motion.div className="absolute w-fit h-fit top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inset-0">
+        <motion.div
+          style={{ scale }}
+          className="absolute w-fit h-fit top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inset-0"
+        >
           <RotatingStar className="w-full h-full" />
         </motion.div>
         <motion.figure style={{ opacity }}>
