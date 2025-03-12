@@ -1,9 +1,10 @@
 'use client'
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo, useRef, Suspense } from 'react'
 import { Canvas, useLoader, useThree, useFrame } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, useTexture } from '@react-three/drei'
 import * as THREE from 'three'
 import Star from './Pentagon'
+import { useScreenSize } from '@/hooks/useScreenSize'
 
 // Hexagon geometry creation utility
 function createHexagonGeometry(width: number, height: number) {
@@ -51,8 +52,13 @@ function Orb({
     () => Array.from({ length: totalImages }, (_, i) => `/images/${i + 1}.jpg`),
     [totalImages]
   )
-
+  // const { width } = useThree((state) => state.viewport)
+  const { isSm } = useScreenSize()
+  sphereRadius = isSm ? 3 : 5
+  baseWidth = isSm ? 0.4 : 0.6
+  baseHeight = isSm ? 0.4 : 0.6
   const textures = useLoader(THREE.TextureLoader, imagePaths) as THREE.Texture[]
+  // const textures = useTexture(imagePaths)
 
   useEffect(() => {
     textures.forEach((texture) => {
@@ -62,7 +68,8 @@ function Orb({
       //   texture.repeat.set(0.5, 0.5)
       //   texture.center.set(0.5, 0.5)
       texture.repeat.set(2, 2)
-      texture.center.set(2, 2)
+      // texture.center.set(2, 2)
+      texture.center.set(1, 1)
     })
   }, [textures])
 
@@ -79,13 +86,12 @@ function Orb({
     return posArray
   }, [totalItems, sphereRadius])
 
-  const textureIndices = useMemo(
-    () =>
-      Array.from({ length: totalItems }, () =>
-        Math.floor(Math.random() * textures.length)
-      ),
-    [totalItems, textures.length]
-  )
+  const textureIndices = useMemo(() => {
+    if (textures.length === 0) return []
+    return Array.from({ length: totalItems }, () =>
+      Math.floor(Math.random() * textures.length)
+    )
+  }, [totalItems, textures.length])
 
   return (
     <Canvas
@@ -136,6 +142,7 @@ function Orb({
         enablePan={false}
         enabled={!selectedIndex}
       />
+
       {positions.map((pos, i) => (
         <HexagonImage
           key={i}
@@ -182,7 +189,7 @@ function HexagonImage({
 
   useFrame(({ camera }) => {
     if (!meshRef.current) return
-    meshRef.current.rotateX
+    // meshRef.current.rotateX
 
     if (isSelected) {
       const distance = 5

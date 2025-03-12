@@ -24,7 +24,7 @@ export default function page({}: Props) {
       </div>
       <DeepScroll />
       <RollingGallery autoplay={true} pauseOnHover={true} />
-      <div className="h-screen  ">
+      <div className="h-[70vh] w-full my-0 py-0 ">
         <Orb />
       </div>
       {/* <div className="h-screen bg-blue-500"></div>

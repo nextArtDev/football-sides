@@ -7,6 +7,8 @@ import {
   useTransform,
 } from 'motion/react'
 import ScoreCard from './score-card'
+import { useScreenSize } from '@/hooks/useScreenSize'
+// import ScoreCard from './scores-card'
 
 const IMGS = [
   'https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -28,17 +30,21 @@ const RollingGallery = ({
 }) => {
   images = images.length > 0 ? images : IMGS
 
-  const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640)
-  useEffect(() => {
-    const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 640)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  const { isSm } = useScreenSize()
+  // const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640)
+  // useEffect(() => {
+  //   const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 640)
+  //   window.addEventListener('resize', handleResize)
+  //   return () => window.removeEventListener('resize', handleResize)
+  // }, [])
 
   // 3D geometry
-  const cylinderWidth = isScreenSizeSm ? 1100 : 1800
-  const faceCount = images.length
-  const faceWidth = (cylinderWidth / faceCount) * 1.5
+  //   const cylinderWidth = isScreenSizeSm ? 1100 : 1800
+  const cylinderWidth = isSm ? 1100 : 1800
+  //   const faceCount = images.length
+  const faceCount = 5
+  //   const faceWidth = (cylinderWidth / faceCount) * 1.5
+  const faceWidth = (cylinderWidth / faceCount) * 1
   const radius = cylinderWidth / (2 * Math.PI)
 
   // Framer Motion
@@ -105,20 +111,20 @@ const RollingGallery = ({
 
   return (
     <div className="relative h-[500px] w-full overflow-hidden">
-      <div
+      {/* <div
         className="absolute top-0 left-0 h-full w-[48px] z-10"
         style={{
           background:
             'linear-gradient(to left, rgba(0,0,0,0) 0%, #060606 100%)',
         }}
-      />
-      <div
+      /> */}
+      {/* <div
         className="absolute top-0 right-0 h-full w-[48px] z-10"
         style={{
           background:
             'linear-gradient(to right, rgba(0,0,0,0) 0%, #060606 100%)',
         }}
-      />
+      /> */}
 
       <div className="flex h-full items-center justify-center [perspective:1000px] [transform-style:preserve-3d]">
         <motion.div
@@ -136,12 +142,12 @@ const RollingGallery = ({
             width: cylinderWidth,
             transformStyle: 'preserve-3d',
           }}
-          className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+          className="flex min-h-fit cursor-grab items-center justify-center [transform-style:preserve-3d]"
         >
           {images.map((url, i) => (
             <div
               key={i}
-              className="group absolute flex h-fit items-center justify-center p-[8%] [backface-visibility:hidden] md:p-[6%]"
+              className="group absolute flex h-fit items-center justify-center p-[2%] [backface-visibility:hidden] md:p-[2%]"
               style={{
                 width: `${faceWidth}px`,
                 transform: `rotateY(${
@@ -156,7 +162,7 @@ const RollingGallery = ({
                            transition-transform duration-300 ease-out group-hover:scale-105
                            sm:h-[100px] sm:w-[220px]"
               /> */}
-              <ScoreCard
+              {/* <ScoreCard
                 className="bg-yellow-500 h-[120px] w-[300px] rounded-[15px]   object-cover
                            transition-transform duration-300 ease-out group-hover:scale-105
                            "
@@ -164,6 +170,24 @@ const RollingGallery = ({
                 homeScore={2}
                 awayTeam={'سپاهان'}
                 homeTeam={'منچستر'}
+              /> */}
+              <ScoreCard
+                awayScore={2}
+                awayTeam={{
+                  logo: 'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
+                  name: 'رئال مادرید',
+                }}
+                homeScore={1}
+                homeTeam={{
+                  //   logo: '/sepahan-logo.png',
+                  logo: 'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
+                  name: 'سپاهان',
+                }}
+                className="bg-yellow-500 h-[100px] w-[300px] rounded-[15px]   object-cover
+                           transition-transform duration-300 ease-out group-hover:scale-105
+                           "
+                matchTime="نتیجه نهایی"
+                scorer="Foden"
               />
             </div>
           ))}

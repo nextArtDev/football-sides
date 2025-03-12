@@ -17,7 +17,7 @@ function page() {
         //   top: '0',
         //   left: '0',
         // }}
-        className=" w-full min-h-screen h-screen flex flex-col items-center justify-center"
+        className=" w-full min-h-screen h-fit    flex flex-col items-center justify-center"
       >
         {/* Desktop */}
         <Orb />
