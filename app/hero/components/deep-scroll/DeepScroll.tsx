@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react'
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ReactLenis from 'lenis/react'
 
 type Props = {}
 
@@ -68,36 +69,39 @@ function DeepScroll({}: Props) {
   )
 
   return (
-    <div ref={container} className="relative">
-      <div
-        id="scope"
-        className="h-[50vh] md:h-screen overflow-hidden relative "
-      >
-        {/* <div className="h-[250vh] w-[250vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  img-in transform-3d z-[-1] "> */}
-        <div className="h-[50vh]  w-[100vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  img-in transform-3d z-[-1] ">
-          <div className="  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[47%] -translate-z-[300rem] rotate-x-[91.6deg] ">
-            {Array.from({ length: 30 }).map((_, i) => (
-              <article key={i}>
-                <h1 className="text-3xl">Work</h1>
-              </article>
-            ))}
+    <ReactLenis root>
+      <div ref={container} className="relative">
+        <div
+          id="scope"
+          className="h-[50vh] md:h-screen overflow-hidden relative "
+        >
+          {/* <div className="h-[250vh] w-[250vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  img-in transform-3d z-[-1] "> */}
+          <div className="h-[50vh]  w-[100vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  img-in transform-3d z-[-1] ">
+            <div className="  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[47%] -translate-z-[300rem] rotate-x-[91.6deg] ">
+              {Array.from({ length: 30 }).map((_, i) => (
+                <article key={i}>
+                  {/* <h1 className="text-3xl">Work</h1> */}
+                  <h1 className="text-3xl"> </h1>
+                </article>
+              ))}
+            </div>
           </div>
+          {cardPositions.map(({ top, left }, i) => (
+            <div
+              key={i}
+              id="card"
+              className="absolute w-[200px] h-[150px] md:w-[400px] md:h-[250px] will-change-transform overflow-hidden transform transform-3d "
+              style={{ top: top, left: left }}
+            >
+              <img
+                className="rounded-xl w-full h-full object-cover"
+                src={`/images/${i + 1}.jpg`}
+              />
+            </div>
+          ))}
         </div>
-        {cardPositions.map(({ top, left }, i) => (
-          <div
-            key={i}
-            id="card"
-            className="absolute w-[200px] h-[150px] md:w-[400px] md:h-[250px] will-change-transform overflow-hidden transform transform-3d "
-            style={{ top: top, left: left }}
-          >
-            <img
-              className="rounded-xl w-full h-full object-cover"
-              src={`/images/${i + 1}.jpg`}
-            />
-          </div>
-        ))}
       </div>
-    </div>
+    </ReactLenis>
   )
 }
 

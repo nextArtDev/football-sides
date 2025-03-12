@@ -44,7 +44,7 @@ function Orb({
   baseWidth = 0.6,
   baseHeight = 0.6,
   sphereRadius = 5,
-  backgroundColor = '#1b1b1b',
+  backgroundColor,
 }: Props) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const imagePaths = useMemo(
@@ -97,7 +97,7 @@ function Orb({
       //   }}
     >
       <ambientLight intensity={5} />
-      <Star
+      {/* <Star
         position={[-2, -0.3, 0]}
         rotation={[0, 0, -Math.PI / 2]} // Rotate 90 degrees
         scale={[0.7, 0.7, 0.7]}
@@ -124,7 +124,7 @@ function Orb({
         innerRadius={0.5}
         points={5}
         depth={0.2}
-      />
+      /> */}
 
       <OrbitControls
         enableDamping
