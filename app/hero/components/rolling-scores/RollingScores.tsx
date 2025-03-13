@@ -147,7 +147,7 @@ const RollingGallery = ({
           {images.map((url, i) => (
             <div
               key={i}
-              className="group absolute flex h-fit items-center justify-center p-[2%] [backface-visibility:hidden] md:p-[2%]"
+              className="group absolute flex h-fit items-center justify-center !p-0  [backface-visibility:hidden]  "
               style={{
                 width: `${faceWidth}px`,
                 transform: `rotateY(${
@@ -183,8 +183,8 @@ const RollingGallery = ({
                   logo: 'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
                   name: 'سپاهان',
                 }}
-                className="bg-yellow-500 h-[100px] w-[300px] rounded-[15px]   object-cover
-                           transition-transform duration-300 ease-out group-hover:scale-105
+                className="bg-yellow-500 h-[100px] w-[300px] md:h-[150px] md:w-[350px] rounded-[15px]   object-cover
+                           transition-transform duration-300 ease-out group-hover:scale-115
                            "
                 matchTime="نتیجه نهایی"
                 scorer="Foden"

@@ -33,7 +33,7 @@ export default function ScoreCard({
   const [popAnimation, setPopAnimation] = useState(false)
 
   return (
-    <div className={cn('!px-3 py-2', className)}>
+    <div className={cn('py-2', className)}>
       <motion.div
         className={`rounded-3xl ${scored ? 'bg-[#09374d]' : 'bg-none'} p-1`}
         animate={{ height: scored ? 160 : 100 }}
@@ -51,7 +51,9 @@ export default function ScoreCard({
               />
             </figure>
             {!scored && (
-              <span className="text-xs md:text-sm ">{homeTeam.name}</span>
+              <span className="text-xs line-clamp-2 text-center max-w-[70px] md:text-sm ">
+                {homeTeam.name}
+              </span>
             )}
           </div>
 
@@ -79,7 +81,9 @@ export default function ScoreCard({
             </figure>
 
             {!scored && (
-              <span className="text-xs md:text-sm ">{awayTeam.name}</span>
+              <span className="  text-xs line-clamp-2 text-center max-w-[70px] md:text-sm ">
+                {awayTeam.name}
+              </span>
             )}
           </div>
         </div>

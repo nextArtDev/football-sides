@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import RotatingStar from './RotatingStar'
 import Image from 'next/image'
 import ball from '@/public/images/ball.png'
+import logo from '@/public/images/logo.png'
 import cup from '@/public/images/world-cup.png'
 import { motion, useScroll, useSpring, useTransform } from 'motion/react'
 
@@ -73,8 +74,8 @@ function DynamicLogo({}: Props) {
           <Image
             fill
             alt="logo"
-            src={ball}
-            className="scale-50 cursor-not-allowed pointer-events-none"
+            src={logo}
+            className="scale-[0.65] cursor-not-allowed pointer-events-none"
             //   style={{ transform: 'scale(0.5)' }}
           />
         </motion.figure>

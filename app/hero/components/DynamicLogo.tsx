@@ -4,6 +4,7 @@ import RotatingStar from './RotatingStar'
 
 import Image from 'next/image'
 import ball from '@/public/images/ball.png'
+import logo from '@/public/images/logo.png'
 import { motion, useScroll, useTransform } from 'motion/react'
 type Props = {}
 
@@ -28,7 +29,7 @@ function DynamicLogo({}: Props) {
         <Image
           fill
           alt="logo"
-          src={ball}
+          src={logo}
           className="scale-50 cursor-not-allowed pointer-events-none"
         />
       </motion.figure>
