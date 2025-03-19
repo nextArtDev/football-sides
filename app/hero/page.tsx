@@ -8,6 +8,7 @@ import Orb from '../3d-orb/components/Orb1'
 import Parallax from '../parallax/components/Parallax2'
 import HorizontalCanvas from '../horizontal/components/Horizontal-canvas'
 import RollingGallery from './components/rolling-scores/RollingScores'
+import CardSwiper from './components/image-slider/CardSwiper'
 
 type Props = {}
 
@@ -19,10 +20,12 @@ export default function page({}: Props) {
         <OrbitingItems />
       </div>
       <HorizontalCanvas />
+
       <div className="h-[100vh]">
         <Parallax />
       </div>
       <DeepScroll />
+      <CardSwiper />
       <RollingGallery autoplay={true} pauseOnHover={true} />
       <div className="h-[70vh] w-full my-0 py-0 ">
         <Orb />
