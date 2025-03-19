@@ -9,6 +9,7 @@ import Parallax from '../parallax/components/Parallax2'
 import HorizontalCanvas from '../horizontal/components/Horizontal-canvas'
 import RollingGallery from './components/rolling-scores/RollingScores'
 import CardSwiper from './components/image-slider/CardSwiper'
+import Ball from './components/ball/Ball'
 
 type Props = {}
 
@@ -16,6 +17,9 @@ export default function page({}: Props) {
   return (
     <div className="w-full min-h-screen h-screen ">
       <Hero />
+      <section className="absolute inset-0">
+        <Ball />
+      </section>
       <div className="h-[80vh]  ">
         <OrbitingItems />
       </div>

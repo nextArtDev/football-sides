@@ -8,6 +8,7 @@ import {
 } from 'motion/react'
 import ScoreCard from './score-card'
 import { useScreenSize } from '@/hooks/useScreenSize'
+import logo from '@/public/images/logo.png'
 // import ScoreCard from './scores-card'
 
 const IMGS = [
@@ -172,15 +173,15 @@ const RollingGallery = ({
                 homeTeam={'منچستر'}
               /> */}
               <ScoreCard
-                awayScore={2}
+                awayScore={0}
                 awayTeam={{
                   logo: 'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
-                  name: 'رئال مادرید',
+                  name: 'پرسپولیس',
                 }}
-                homeScore={1}
+                homeScore={3}
                 homeTeam={{
                   //   logo: '/sepahan-logo.png',
-                  logo: 'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
+                  logo: '/images/logo.png',
                   name: 'سپاهان',
                 }}
                 className="bg-yellow-500 h-[100px] w-[300px] md:h-[150px] md:w-[350px] rounded-[15px]   object-cover
