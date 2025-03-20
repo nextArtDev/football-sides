@@ -91,7 +91,7 @@ const Parallax = ({ type }: { type?: string }) => {
         }}
       ></motion.div>
       <motion.div
-        className="stars "
+        className="stars origin-center"
         whileInView={{ rotate: '360deg' }}
         transition={{
           type: 'spring',
@@ -104,7 +104,7 @@ const Parallax = ({ type }: { type?: string }) => {
           backgroundSize: 'contain',
           backgroundRepeat: 'no-repeat',
           scale: 0.1,
-
+          transformOrigin: 'center',
           backgroundPosition: 'bottom',
           width: '100%',
           height: '100%',

@@ -20,9 +20,16 @@ const RenderModel = ({
       // dpr is the device pixel ratio. Here we are setting it to 1 and 2 for retina displays to prevent blurriness in the model rendering on high resolution screens.
     >
       <OrbitControls />
+
       <Suspense fallback={null}>{children}</Suspense>
 
-      <Environment preset="forest" />
+      {/* <Environment preset="forest" /> */}
+      <directionalLight intensity={4} />
+      <Environment
+        files="/images/hdri2.jpg"
+        background
+        backgroundBlurriness={0.08}
+      />
     </Canvas>
   )
 }
