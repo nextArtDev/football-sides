@@ -22,12 +22,12 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
   const modelRef = useRef<THREE.Group>(null)
 
   const bounceHeight = 0.1 // Maximum height of the bounce
-  const bounceSpeed = 0.2 // Speed of the bounce
+  const bounceSpeed = 0.8 // Speed of the bounce
   let direction = -1 // Direction of the bounce
 
   useFrame((_, delta) => {
     if (modelRef.current) {
-      modelRef.current.rotation.y -= 0.007
+      modelRef.current.rotation.y -= 0.01
       modelRef.current.rotation.x += 0.0005
 
       // Update the position of the ball

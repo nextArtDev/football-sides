@@ -27,8 +27,10 @@ export const CardSwipe: React.FC<CarouselProps> = ({
 }) => {
   const css = `
   .swiper {
-    width: 50%;
+    width: full;
     padding-bottom: 50px;
+    // width: 50%;
+    // padding-bottom: 50px;
   }
   
   .swiper-slide {
@@ -38,7 +40,7 @@ export const CardSwipe: React.FC<CarouselProps> = ({
   border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
-  color: #fff;
+  // color: #fff;
   }
   
   .swiper-slide img {
@@ -48,10 +50,10 @@ export const CardSwipe: React.FC<CarouselProps> = ({
   
   `
   return (
-    <section className="w-ace-y-4">
+    <section className="max-w-2xl h-full mx-auto w-space-y-4 overflow-x-hidden">
       <style>{css}</style>
-      <div className="mx-auto w-full max-w-4xl rounded-[24px] border border-black/5 p-2 shadow-sm md:rounded-t-[44px]">
-        <div className="relative mx-auto flex w-full flex-col rounded-[24px] border border-black/5 bg-neutral-800/5 p-2 shadow-sm md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
+      <div className="mx-auto w-full max-w-4xl rounded-[24px]   p-2  md:rounded-t-[44px]">
+        <div className="relative mx-auto flex w-full flex-col rounded-[24px]     p-2  md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
           {/* <Badge
             variant="outline"
             className="absolute left-4 top-6 rounded-[14px] border border-black/10 text-base md:left-6"

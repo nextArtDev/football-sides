@@ -24,7 +24,7 @@ const RenderModel = ({
       <Suspense fallback={null}>{children}</Suspense>
 
       {/* <Environment preset="forest" /> */}
-      <directionalLight intensity={4} />
+      <directionalLight intensity={10} />
       <Environment
         files="/images/hdri2.jpg"
         background

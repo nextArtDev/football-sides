@@ -17,9 +17,9 @@ export default function page({}: Props) {
   return (
     <div className="w-full min-h-screen h-screen ">
       <Hero />
-      <section className="fixed -z-20 inset-0">
+      {/* <section className="fixed -z-20 inset-0">
         <Ball />
-      </section>
+      </section> */}
       <div className="h-[80vh]  ">
         <OrbitingItems />
       </div>

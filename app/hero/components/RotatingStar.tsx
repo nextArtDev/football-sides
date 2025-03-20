@@ -11,7 +11,7 @@ export const RotatingStar = (className: Props) => {
       <CircularRotator
         duration={15}
         reverse
-        size={120}
+        size={130}
         className={cn('mix-blend-difference', className)}
         //   label="Technologies we use"
       >
@@ -21,8 +21,7 @@ export const RotatingStar = (className: Props) => {
         <StarSvg />
         <StarSvg />
         <StarSvg />
-        <StarSvg />
-        <StarSvg />
+        <StarSvg className="" width={'30px'} height={'30px'} />
         <StarSvg />
         <StarSvg />
         <StarSvg />
