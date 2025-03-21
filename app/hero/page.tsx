@@ -10,6 +10,7 @@ import HorizontalCanvas from '../horizontal/components/Horizontal-canvas'
 import RollingGallery from './components/rolling-scores/RollingScores'
 import CardSwiper from './components/image-slider/CardSwiper'
 import Ball from './components/ball/Ball'
+import InfiniteMenuDemo from '../infinite-menu/InfiniteMenuDemo'
 
 type Props = {}
 
@@ -24,7 +25,7 @@ export default function page({}: Props) {
         <OrbitingItems />
       </div>
       <HorizontalCanvas />
-
+      <InfiniteMenuDemo />
       <div className="h-[100vh]">
         <Parallax />
       </div>
