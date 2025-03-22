@@ -8,7 +8,7 @@ function TextScroll() {
         texts={['ورزش  دانش اخلاق ', 'ورزش  دانش اخلاق ', 'ورزش  دانش اخلاق ']}
         //   velocity={velocity}
         velocity={30}
-        className="custom-scroll-text text-5xl opacity-40 font-extrabold"
+        className="custom-scroll-text text-5xl opacity-40 font-extrabold overflow-hidden"
       />
     </section>
   )
