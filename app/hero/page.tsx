@@ -11,6 +11,7 @@ import RollingGallery from './components/rolling-scores/RollingScores'
 import CardSwiper from './components/image-slider/CardSwiper'
 import Ball from './components/ball/Ball'
 import InfiniteMenuDemo from '../infinite-menu/InfiniteMenuDemo'
+import TextSlider from './components/TextSlider'
 
 type Props = {}
 
@@ -21,8 +22,26 @@ export default function page({}: Props) {
       {/* <section className="fixed -z-20 inset-0">
         <Ball />
       </section> */}
-      <div className="h-[80vh]  ">
+      <div className="relative overflow-x-hidden h-[80vh]  ">
         <OrbitingItems />
+        <div className="flex flex-col  ">
+          <TextSlider
+            text="اخلاق"
+            className="absolute
+md:bottom-[70%] bottom-[80%] mix-blend-difference"
+          />
+          <TextSlider
+            text="دانش"
+            className="absolute
+md:bottom-[40%] bottom-[45%] mix-blend-difference"
+            reverse
+          />
+          <TextSlider
+            text="ورزش"
+            className="absolute
+md:bottom-0 bottom-[20%] mix-blend-difference"
+          />
+        </div>
       </div>
       <HorizontalCanvas />
       <InfiniteMenuDemo />
