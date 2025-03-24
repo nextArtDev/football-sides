@@ -1338,7 +1338,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           select-none
           absolute
           font-black
-          [font-size:4rem]
+          [font-size:2.5rem]
           left-[1.6em]
           top-1/2
           transform
@@ -1362,7 +1362,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           select-none
           absolute
           max-w-[10ch]
-          text-[1.5rem]
+          text-[1rem]
           top-1/2
           right-[1%]
           transition-all
@@ -1402,7 +1402,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           }
         `}
           >
-            <p className="select-none relative text-[#060606] top-[2px] text-[26px]">
+            <p className="select-none relative text-[#060606] top-[2px] text-[13px]">
               &#x2197;
             </p>
           </div>

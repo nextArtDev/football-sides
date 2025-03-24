@@ -27,7 +27,7 @@ export const CardSwipe: React.FC<CarouselProps> = ({
 }) => {
   const css = `
   .swiper {
-    width: full;
+    width: 90%;
     padding-bottom: 50px;
     // width: 50%;
     // padding-bottom: 50px;
@@ -50,7 +50,7 @@ export const CardSwipe: React.FC<CarouselProps> = ({
   
   `
   return (
-    <section className="max-w-2xl h-full mx-auto w-space-y-4 overflow-x-hidden">
+    <section className="max-w-2xl p-6 h-full mx-auto w-space-y-4 overflow-x-hidden">
       <style>{css}</style>
       <div className="mx-auto w-full max-w-4xl rounded-[24px]   p-2  md:rounded-t-[44px]">
         <div className="relative mx-auto flex w-full flex-col rounded-[24px]     p-2  md:items-start md:gap-8 md:rounded-b-[20px] md:rounded-t-[40px] md:p-2">
