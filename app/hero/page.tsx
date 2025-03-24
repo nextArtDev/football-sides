@@ -25,7 +25,7 @@ export default function page({}: Props) {
       <div className="relative overflow-x-hidden h-[80vh]  ">
         <OrbitingItems />
         <div className="flex flex-col  ">
-          <TextSlider
+          {/* <TextSlider
             text="اخلاق"
             className="absolute
 md:bottom-[70%] bottom-[80%] mix-blend-difference"
@@ -35,11 +35,11 @@ md:bottom-[70%] bottom-[80%] mix-blend-difference"
             className="absolute
 md:bottom-[40%] bottom-[45%] mix-blend-difference"
             reverse
-          />
+          /> */}
           <TextSlider
-            text="ورزش"
+            text="ورزش، دانش، اخلاق."
             className="absolute
-md:bottom-0 bottom-[20%] mix-blend-difference"
+md:bottom-0 bottom-[5%] mix-blend-difference"
           />
         </div>
       </div>
@@ -51,7 +51,7 @@ md:bottom-0 bottom-[20%] mix-blend-difference"
       <DeepScroll />
       <CardSwiper />
       <RollingGallery autoplay={true} pauseOnHover={true} />
-      <div className="h-[70vh] w-full my-0 py-0 ">
+      <div className="h-screen w-full my-0 py-0 ">
         <Orb />
       </div>
       {/* <div className="h-screen bg-blue-500"></div>

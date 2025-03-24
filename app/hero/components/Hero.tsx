@@ -4,8 +4,6 @@ import React from 'react'
 // import FallingStars from './falling-stars/FallingStars'
 // import DynamicLogo from './DynamicLogo'
 import DynamicLogo from './FallingLogo'
-import TextScroll from './text-scroll/TextScroll'
-import TextSlider from './TextSlider'
 
 function Hero() {
   return (

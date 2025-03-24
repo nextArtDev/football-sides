@@ -12,13 +12,13 @@ type Props = {
 function TextSlider({ text, reverse = false, className }: Props) {
   const sliderVariants = {
     initial: {
-      x: `${reverse ? -40 : 40}%`,
+      x: `0%`,
     },
     animate: {
       x: `${reverse ? -100 : 100}%`,
       transition: {
         repeat: Infinity,
-        repeatType: 'mirror',
+        repeatType: 'mirror' as const, // Add 'as const' here
         duration: 10,
       },
     },
@@ -27,18 +27,9 @@ function TextSlider({ text, reverse = false, className }: Props) {
   return (
     <motion.div
       className={cn(
-        'slidingTextContainer text-yellow-500/60  text-[10vh] md:text-[15vh] -z-[10] w-[50%] font-bold ',
+        'slidingTextContainer text-yellow-500/60  text-[10vh] md:text-[15vh] -z-[10] w-full font-bold ',
         className
       )}
-      //   style={{
-      //     position: 'absolute',
-      //     fontSize: '15vh',
-      //     bottom: '30%',
-      //     whiteSpace: 'nowrap',
-      //     // color: '#ffffff09',
-      //     width: '50%',
-      //     fontWeight: 'bold',
-      //   }}
       variants={sliderVariants}
       initial="initial"
       whileInView="animate"

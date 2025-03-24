@@ -49,7 +49,8 @@ function Orb({
 }: Props) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const imagePaths = useMemo(
-    () => Array.from({ length: totalImages }, (_, i) => `/images/${i + 1}.jpg`),
+    () =>
+      Array.from({ length: totalImages }, (_, i) => `/images/${i + 100}.webp`),
     [totalImages]
   )
   // const { width } = useThree((state) => state.viewport)

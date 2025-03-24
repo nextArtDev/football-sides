@@ -5,6 +5,7 @@ import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ReactLenis from 'lenis/react'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -93,9 +94,11 @@ function DeepScroll({}: Props) {
               className="absolute w-[200px] h-[150px] md:w-[400px] md:h-[250px] will-change-transform overflow-hidden transform transform-3d "
               style={{ top: top, left: left }}
             >
-              <img
+              <Image
+                fill
+                alt="gallery"
                 className="rounded-xl w-full h-full object-cover"
-                src={`/images/${i + 1}.jpg`}
+                src={`/images/${i + 100}.webp`}
               />
             </div>
           ))}
