@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 
 import { motion, useScroll, useTransform } from 'motion/react'
+import Waves from '@/app/hero/components/waves/Waves'
 
 const Parallax = ({ type }: { type?: string }) => {
   const ref = useRef(null)
@@ -29,7 +30,7 @@ const Parallax = ({ type }: { type?: string }) => {
       className="parallax w-full h-full relative flex items-center justify-center overflow-hidden "
       ref={ref}
       style={{
-        backgroundImage: 'url("/images/stadium.jpg")',
+        // backgroundImage: 'url("/images/stadium.jpg")',
         backgroundSize: 'cover',
         width: ' 100%',
         height: '100%',
@@ -45,6 +46,19 @@ const Parallax = ({ type }: { type?: string }) => {
         //     : 'linear-gradient(180deg, #111132, #505064)',
       }}
     >
+      <Waves
+        lineColor="#fff"
+        // backgroundColor="rgba(255, 255, 255, 0.2)"
+        waveSpeedX={0.02}
+        waveSpeedY={0.01}
+        waveAmpX={40}
+        waveAmpY={20}
+        friction={0.9}
+        tension={0.01}
+        maxCursorMove={120}
+        xGap={12}
+        yGap={36}
+      />
       {/* <motion.h1 style={{ fontSize: '100px', y: yText }}>
         {type === 'services' ? 'What We Do?' : 'What We Did?'}
       </motion.h1> */}
