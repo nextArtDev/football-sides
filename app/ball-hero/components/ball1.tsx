@@ -6,9 +6,22 @@ const Balls = () => {
   const [ballsLanded, setBallsLanded] = useState([false, false, false])
 
   const items = [
-    { id: 1, color: 'bg-red-500', text: 'Creative' },
-    { id: 2, color: 'bg-blue-500', text: 'Dynamic' },
-    { id: 3, color: 'bg-green-500', text: 'Solutions' },
+    { id: 1, className: ' ', text: 'باشگاه و مدرسه فوتبال' },
+    {
+      id: 2,
+      className: 'text-4xl   font-bold   ',
+      text: 'سپاهان مسجدسلیمان',
+    },
+    {
+      id: 3,
+      className: 'text-lg font-semibold',
+      text: 'آموزش فوتبال و فوتسال بانوان و آقایان  ',
+    },
+    {
+      id: 4,
+      className: 'text-lg font-semibold',
+      text: ' در رده‌های سنی 6 تا 17 سال',
+    },
   ]
 
   //   Set balls as landed after their animation completes
@@ -27,10 +40,10 @@ const Balls = () => {
   }, [])
 
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-gray-100">
-      <div className="flex flex-col items-center gap-8">
+    <div className=" ">
+      <div className="flex flex-col gap-3 ">
         {items.map((item, index) => (
-          <div key={item.id} className="relative h-20">
+          <div key={item.id} className="relative ">
             {/* First Ball Animation - Main Drop */}
             <motion.div
               style={{
@@ -38,11 +51,11 @@ const Balls = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
-              className="absolute  top-0 left-0 right-0 mx-auto shadow-lg"
+              className="absolute  top-0 left-0 right-0 mx-auto "
               initial={{
                 y: -500,
-                width: 80,
-                height: 80,
+                width: 60,
+                height: 60,
                 borderRadius: '50%',
                 opacity: 1,
               }}
@@ -91,11 +104,11 @@ const Balls = () => {
                 backgroundPosition: 'center',
                 display: 'none',
               }}
-              className="absolute top-0 left-0 right-0 mx-auto shadow-lg"
+              //   className="absolute top-0 left-0 right-0 mx-auto shadow-lg"
               initial={{
                 y: 0,
-                width: 80,
-                height: 80,
+                // width: 80,
+                height: 'auto',
                 borderRadius: '50%',
                 opacity: 1,
               }}
@@ -138,11 +151,11 @@ const Balls = () => {
                 backgroundPosition: 'center',
                 display: 'none',
               }}
-              className="absolute top-0 left-0 right-0 mx-auto shadow-lg"
+              className="absolute top-0 left-0 right-0 mx-auto  "
               initial={{
                 y: 0,
-                width: 80,
-                height: 80,
+                // width: 80,
+                // height: 80,
                 borderRadius: '50%',
                 opacity: 1,
               }}
@@ -167,12 +180,12 @@ const Balls = () => {
 
             {/* Text Element */}
             <motion.div
-              className={`${item.color} rounded-md px-6 py-3 flex items-center justify-center shadow-md`}
+              className={` rounded-md    ${item.className}`}
               initial={{
                 opacity: 0,
                 y: 0,
                 scale: 0,
-                width: 140,
+                // width: 140,
               }}
               animate={{
                 opacity: ballsLanded[index] ? 1 : 0,
@@ -192,7 +205,7 @@ const Balls = () => {
               }}
             >
               <motion.span
-                className="font-bold text-white text-xl"
+                className="font-bold "
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.7 + index * 0.3, duration: 0.3 }}

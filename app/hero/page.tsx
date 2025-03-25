@@ -12,6 +12,7 @@ import CardSwiper from './components/image-slider/CardSwiper'
 import Ball from './components/ball/Ball'
 import InfiniteMenuDemo from '../infinite-menu/InfiniteMenuDemo'
 import TextSlider from './components/TextSlider'
+import Chooghaa from '../background/components/Chooghaa'
 
 type Props = {}
 
@@ -50,7 +51,8 @@ md:bottom-0 bottom-[5%] mix-blend-difference "
       </div>
 
       <CardSwiper />
-      <div className="bg-[var(--foreground)]">
+      <div className="relative bg-[var(--foreground)]">
+        <Chooghaa className="absolute w-full top-0" firstColor="yellow" />
         <DeepScroll />
       </div>
       <RollingGallery autoplay={true} pauseOnHover={true} />
