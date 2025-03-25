@@ -1,5 +1,5 @@
 import React from 'react'
-import Balls from './components/balls'
+import Balls from './components/ball1'
 
 type Props = {}
 
