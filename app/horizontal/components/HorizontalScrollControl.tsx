@@ -77,14 +77,14 @@ function Pages() {
         position={[width * 2, 0, 0]}
         urls={['/niazmand.png', '/niazmand.png', '/niazmand.png']}
       />
-      <Page
+      {/* <Page
         position={[width * 3, 0, 0]}
         urls={['/niazmand.png', '/niazmand.png', '/niazmand.png']}
       />
       <Page
         position={[width * 4, 0, 0]}
         urls={['/niazmand.png', '/niazmand.png', '/niazmand.png']}
-      />
+      /> */}
     </>
   )
 }

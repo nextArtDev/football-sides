@@ -66,7 +66,14 @@ import React from 'react'
 
 function InfiniteMenuDemo() {
   return (
-    <div style={{ height: '600px', position: 'relative' }}>
+    <div
+      style={{
+        // height: '600px',
+        height: '100vh',
+        position: 'relative',
+        background: 'var(--background)',
+      }}
+    >
       <InfiniteMenu items={items} />
     </div>
   )

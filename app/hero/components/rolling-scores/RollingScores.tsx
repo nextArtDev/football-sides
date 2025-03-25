@@ -9,6 +9,7 @@ import {
 import ScoreCard from './score-card'
 import { useScreenSize } from '@/hooks/useScreenSize'
 import logo from '@/public/images/logo.png'
+import Chooghaa from '@/app/background/components/Chooghaa'
 // import ScoreCard from './scores-card'
 
 const IMGS = [
@@ -112,6 +113,7 @@ const RollingGallery = ({
 
   return (
     <div className="relative h-[500px] w-full overflow-hidden">
+      <Chooghaa className="absolute   w-full h-1/3 bottom-0 -z-10 rotate-180 " />
       {/* <div
         className="absolute top-0 left-0 h-full w-[48px] z-10"
         style={{

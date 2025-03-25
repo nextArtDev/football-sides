@@ -6,6 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import ReactLenis from 'lenis/react'
 import Image from 'next/image'
+import Chooghaa from '@/app/background/components/Chooghaa'
 
 type Props = {}
 
@@ -72,6 +73,7 @@ function DeepScroll({}: Props) {
   return (
     <ReactLenis root>
       <div ref={container} className="relative">
+        <Chooghaa className="absolute   w-full h-1/3 bottom-0   rotate-180 " />
         <div
           id="scope"
           className="h-[50vh] md:h-screen overflow-hidden relative "

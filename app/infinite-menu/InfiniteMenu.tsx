@@ -1312,15 +1312,15 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
     }
   }, [items])
 
-  const handleButtonClick = () => {
-    if (!activeItem?.link) return
-    if (activeItem.link.startsWith('http')) {
-      window.open(activeItem.link, '_blank')
-    } else {
-      // internal route logic here
-      console.log('Internal route:', activeItem.link)
-    }
-  }
+  // const handleButtonClick = () => {
+  //   if (!activeItem?.link) return
+  //   if (activeItem.link.startsWith('http')) {
+  //     window.open(activeItem.link, '_blank')
+  //   } else {
+  //     // internal route logic here
+  //     console.log('Internal route:', activeItem.link)
+  //   }
+  // }
 
   return (
     <div className="relative w-full h-full">
@@ -1378,7 +1378,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           </p>
 
           {/* Action Button */}
-          <div
+          {/* <div
             onClick={handleButtonClick}
             className={`
           absolute
@@ -1405,7 +1405,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
             <p className="select-none relative text-[#060606] top-[2px] text-[13px]">
               &#x2197;
             </p>
-          </div>
+          </div> */}
         </>
       )}
     </div>

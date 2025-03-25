@@ -22,7 +22,7 @@ export default function page({}: Props) {
       {/* <section className="fixed -z-20 inset-0">
         <Ball />
       </section> */}
-      <div className="relative overflow-x-hidden h-[80vh]  ">
+      <div className="relative overflow-x-hidden h-[80vh] bg-foreground  ">
         <OrbitingItems />
         <div className="flex flex-col  ">
           {/* <TextSlider
@@ -38,8 +38,8 @@ md:bottom-[40%] bottom-[45%] mix-blend-difference"
           /> */}
           <TextSlider
             text="ورزش، دانش، اخلاق."
-            className="absolute
-md:bottom-0 bottom-[5%] mix-blend-difference"
+            className="absolute z-[11]
+md:bottom-0 bottom-[5%] mix-blend-difference "
           />
         </div>
       </div>
@@ -48,11 +48,14 @@ md:bottom-0 bottom-[5%] mix-blend-difference"
       <div className="h-[100vh]">
         <Parallax />
       </div>
-      <DeepScroll />
+
       <CardSwiper />
+      <div className="bg-[var(--foreground)]">
+        <DeepScroll />
+      </div>
       <RollingGallery autoplay={true} pauseOnHover={true} />
       <div className="h-screen w-full my-0 py-0 ">
-        <Orb />
+        <Orb backgroundColor={'var(--foreground)'} />
       </div>
       {/* <div className="h-screen bg-blue-500"></div>
       <div className="h-screen bg-red-500"></div> */}
