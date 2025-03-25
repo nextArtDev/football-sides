@@ -13,6 +13,7 @@ import Ball from './components/ball/Ball'
 import InfiniteMenuDemo from '../infinite-menu/InfiniteMenuDemo'
 import TextSlider from './components/TextSlider'
 import Chooghaa from '../background/components/Chooghaa'
+import ChooghaaYellow from '../background/components/ChooghaYellow'
 
 type Props = {}
 
@@ -52,7 +53,7 @@ md:bottom-0 bottom-[5%] mix-blend-difference "
 
       <CardSwiper />
       <div className="relative bg-[var(--foreground)]">
-        <Chooghaa className="absolute w-full top-0" firstColor="yellow" />
+        <ChooghaaYellow className="absolute w-full top-0" />
         <DeepScroll />
       </div>
       <RollingGallery autoplay={true} pauseOnHover={true} />

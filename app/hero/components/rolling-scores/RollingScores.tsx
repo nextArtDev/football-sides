@@ -113,7 +113,7 @@ const RollingGallery = ({
 
   return (
     <div className="relative h-[500px] w-full overflow-hidden">
-      <Chooghaa className="absolute   w-full h-1/3 bottom-0 -z-10 rotate-180 " />
+      <Chooghaa className="absolute   w-full h-1/3 -bottom-1 -z-10 rotate-180 " />
       {/* <div
         className="absolute top-0 left-0 h-full w-[48px] z-10"
         style={{
