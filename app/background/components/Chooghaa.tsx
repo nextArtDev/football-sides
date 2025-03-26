@@ -9,8 +9,8 @@ type Props = {
 function Chooghaa({ className }: Props) {
   return (
     <motion.section
-      initial={false}
-      whileInView={{ height: 'auto' }}
+      initial={{ opacity: 0, y: '-200px' }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ type: 'tween', duration: 1.5, ease: 'circOut' }}
       viewport={{ once: true }}
       className={cn('transparent flex h-0 max-w-7xl mx-auto', className)}

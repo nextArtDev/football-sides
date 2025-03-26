@@ -11,13 +11,10 @@ function Hero() {
     <div className="relative  w-full h-screen flex flex-col items-center justify-center text-center gap-4">
       {/* <Chooghaa className="absolute opacity-65 w-full h-1/3 bottom-0 -z-10 mix-blend-difference" /> */}
 
-      <Chooghaa
-        firstColor="neutral-950"
-        className="absolute  w-full h-1/3 bottom-0 -z-10 rotate-180 "
-      />
+      <Chooghaa className="absolute  w-full h-1/3 bottom-0 -z-10 rotate-180 " />
       {/* <TextScroll /> */}
       <article className="px-2 ">
-        <div className="absolute z-10 top-4 left-1/2 -translate-x-1/2">
+        <div className="absolute z-10 top-1 left-1/2 -translate-x-1/2">
           {/* <DynamicLogo /> */}
           <DynamicLogo />
         </div>

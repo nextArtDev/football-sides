@@ -53,16 +53,19 @@ function DynamicLogo({}: Props) {
   return (
     <div
       ref={containerRef}
-      className="relative h-[100vh] md:h-[110vh] w-full  "
+      className="relative h-[100vh] md:h-[110vh] w-full z-10 "
     >
       <motion.div
         style={{
           y: yPosition,
-          //   opacity,
           position: 'sticky',
-          top: '15vh',
+          top: '10vh',
         }}
-        className="relative w-[150px] aspect-square mx-auto flex items-center justify-center"
+        initial={{ top: 0, opacity: 0 }}
+        whileInView={{ top: '10vh', opacity: 1 }}
+        transition={{ delay: 1, duration: 2.5 }}
+        viewport={{ once: true }}
+        className="  w-[150px] aspect-square mx-auto flex items-center justify-center "
       >
         <motion.div
           style={{ scale }}
