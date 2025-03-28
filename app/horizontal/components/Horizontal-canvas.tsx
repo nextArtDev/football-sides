@@ -1,7 +1,7 @@
 'use client'
 import { Canvas } from '@react-three/fiber'
 import React from 'react'
-import HorizontalScrollControl from './HorizontalScrollControl'
+import HorizontalScrollControl from './HorizontalScrollControl2'
 
 type Props = {}
 
