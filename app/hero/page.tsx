@@ -14,6 +14,7 @@ import InfiniteMenuDemo from '../infinite-menu/InfiniteMenuDemo'
 import TextSlider from './components/TextSlider'
 import Chooghaa from '../background/components/Chooghaa'
 import ChooghaaYellow from '../background/components/ChooghaYellow'
+import ParallaxText from './components/parallax-text/ParallaxText'
 
 type Props = {}
 
@@ -47,8 +48,11 @@ md:bottom-0 bottom-[5%] mix-blend-difference "
       </div>
       <HorizontalCanvas />
       <InfiniteMenuDemo />
-      <div className="h-[100vh]">
+      <div className="relative h-[100vh]">
         <Parallax />
+        <div className="absolute inset-0 ">
+          <ParallaxText />
+        </div>
       </div>
 
       <CardSwiper />
