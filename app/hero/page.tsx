@@ -7,7 +7,7 @@ import HorizontalScrollControl from '../horizontal/components/HorizontalScrollCo
 import Orb from '../3d-orb/components/Orb1'
 import Parallax from '../parallax/components/Parallax2'
 import HorizontalCanvas from '../horizontal/components/Horizontal-canvas'
-import RollingGallery from './components/rolling-scores/RollingScores'
+import RollingGallery from './components/rolling-scores/RollingScores1'
 import CardSwiper from './components/image-slider/CardSwiper'
 import Ball from './components/ball/Ball'
 import InfiniteMenuDemo from '../infinite-menu/InfiniteMenuDemo'

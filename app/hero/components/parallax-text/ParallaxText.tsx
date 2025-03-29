@@ -2,16 +2,7 @@ import React from 'react'
 import { MultiDirectionSlide } from './MultiDirectionalsSlide'
 import MorphingText from './MorphingText'
 
-const texts = [
-  'تاکتیک',
-  'تکنیک',
-  'مهارتهای فردی',
-  'دروازه‌بانی',
-  '',
-  '',
-  '',
-  '',
-]
+const texts = ['تاکتیک', 'تکنیک', 'مهارتهای فردی', 'دروازه‌بانی']
 
 function ParallaxText() {
   return (

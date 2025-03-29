@@ -177,7 +177,7 @@ const RollingGallery = ({
               <ScoreCard
                 awayScore={0}
                 awayTeam={{
-                  logo: 'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
+                  logo: '/next.svg',
                   name: 'پرسپولیس',
                 }}
                 homeScore={3}
